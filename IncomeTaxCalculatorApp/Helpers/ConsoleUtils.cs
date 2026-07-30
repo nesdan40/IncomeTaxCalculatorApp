@@ -42,7 +42,7 @@ namespace IncomeTaxCalculatorApp.Helpers
 
         public static string FormatCurrency(decimal amount)
         {
-            return amount.ToString("F2", CultureInfo.CurrentCulture);
+            return amount.ToString("N2", CultureInfo.CurrentCulture);
         }
     }
 }
