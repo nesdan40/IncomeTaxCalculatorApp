@@ -145,5 +145,12 @@ namespace IncomeTaxCalculatorApp.Services
             Console.WriteLine("Current input cleared.");
             ConsoleUtils.PressAnyKeyToContinue();
         }
+
+        public static void ShowNoInputToClear()
+        {
+            Console.Clear();
+            Console.WriteLine("No current taxpayer details to clear.");
+            ConsoleUtils.PressAnyKeyToContinue();
+        }
     }
 }

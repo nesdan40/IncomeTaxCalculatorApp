@@ -32,8 +32,15 @@ namespace IncomeTaxCalculatorApp
                         ApplicationService.ShowSummary(lastTaxPayer);
                         break;
                     case "3":
-                        lastTaxPayer = null;
-                        ApplicationService.ShowClearedMessage();
+                        if (lastTaxPayer == null)
+                        {
+                            ApplicationService.ShowNoInputToClear();
+                        }
+                        else
+                        {
+                            lastTaxPayer = null;
+                            ApplicationService.ShowClearedMessage();
+                        }
                         break;
                     case "4":
                         exit = true;
