@@ -8,7 +8,7 @@ namespace IncomeTaxCalculatorApp.Services
     public static class ApplicationService
     {
         private const string TaxSlabInfo =
-            "Tax slabs (developer-defined):\n" +
+            "Tax slabs:\n" +
             "  0 - 250,000 : 0%\n" +
             "  250,001 - 500,000 : 5% on portion above 250,000\n" +
             "  500,001 - 1,000,000 : 20% on portion above 500,000\n" +
