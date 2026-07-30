@@ -2,11 +2,11 @@
 
 Income Tax Calculator Console Application
 
-Overview
+## Overview
 
 Simple, menu-driven .NET 10 console application that estimates individual income tax using developer-defined slabs. Implements input collection, post-collection validation, slab-based tax computation, and a summary view. Includes basic unit tests for tax calculation logic.
 
-Key features
+## Key features
 
 - Calculate income tax (collects Name, PAN, Financial Year, Annual Income, Eligible Deductions).
 - View last tax summary.
@@ -15,14 +15,14 @@ Key features
 - Displays monetary values with two decimal places.
 - Bonus: compares tax payable before and after applying deductions.
 
-Tax slab (documented and displayed in the app)
+## Tax slab (documented and displayed in the app)
 
 - 0 - 250,000 : 0%
 - 250,001 - 500,000 : 5% on portion above 250,000
 - 500,001 - 1,000,000 : 20% on portion above 500,000
 - Above 1,000,000 : 30% on portion above 1,000,000
 
-Validation rules
+## Validation rules
 
 - Name: required; alphabetic characters and spaces only (no digits or symbols).
 - PAN: required; basic format: 5 letters, 4 digits, 1 letter (example: ABCDE1234F). This is a pattern check only.
@@ -30,7 +30,7 @@ Validation rules
 - Annual Income: must be a number >= 0.
 - Deductions: must be a number >= 0 and <= Annual Income.
 
-Project layout (important files)
+## Project layout (important files)
 
 - IncomeTaxCalculatorApp/Program.cs
   - Main menu loop (delegates to ApplicationService)
@@ -42,15 +42,13 @@ Project layout (important files)
   - Console input/format helpers
 - IncomeTaxCalculatorApp/Models/TaxPayer.cs
   - DTO for input and computed values
-- IncomeTaxCalculatorApp.Tests/
-  - MSTest project with basic tests for TaxService
 
-Requirements
+## Requirements
 
 - .NET 10 SDK (target framework net10.0)
 - No external libraries used
 
-Build and run
+## Build and run
 
 - Build solution:
   dotnet build
@@ -58,8 +56,20 @@ Build and run
 - Run the console app from the project folder:
   dotnet run --project IncomeTaxCalculatorApp/IncomeTaxCalculatorApp.csproj
 
-Usage notes
+## Usage notes
 
 - The app clears the console when entering each menu option for a clean UI.
 - Option 1 (Calculate income tax) shows the static tax slab table, collects all inputs, validates them together, and re-prompts only invalid fields until all inputs are valid.
 - All outputs use two decimal places for monetary values.
+
+## Outputs
+- Errors/Validation
+  <img width="1440" height="242" alt="image" src="https://github.com/user-attachments/assets/64d046c3-d295-415e-8a05-a84583e364a7" />
+  <img width="746" height="142" alt="image" src="https://github.com/user-attachments/assets/3be397de-e9a9-4b7b-a07d-79748fd7fbab" />
+  <img width="1746" height="358" alt="image" src="https://github.com/user-attachments/assets/325652c5-c310-42f7-9f43-67395469b5b5" />
+
+- Tax Summary
+  <img width="992" height="656" alt="image" src="https://github.com/user-attachments/assets/a1405b94-b6d3-4f72-ac3e-198ffd90790f" />
+
+
+
